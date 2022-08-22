@@ -1,14 +1,14 @@
 import { Box, Center, Text} from "@chakra-ui/react";
-import useApi from "../utils/hooks/useApi";
+import Api from "../components/api";
 
 const Page = () => {
-    const api = useApi();
+    console.log("Any code put here will be executed before rendering the page");
 
     return (
         <Box h={"100vh"} w={"100%"}>
             <Center h={"full"} w={"full"} flexDir={"column"}>
                 <Text>This is your index page :)</Text>
-                <Text color={api.apiError ? "red.500" : "white"} fontSize={"sm"}>Api data: {api.apiData}</Text>
+                <Api />
             </Center>
         </Box>
     );
